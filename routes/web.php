@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/',function(){
+    echo "selamat Datang";
+});
+Route::get('/about',function(){
+    echo "NIM:204720143<br>";
+    echo "Nama: Satria Yudhistira";
+});
+Route::get('/article/{id}',function($id){
+    echo"selamat datang di ID=$id ";
+});
