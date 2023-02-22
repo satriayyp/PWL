@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,6 @@ Route::get('/about',function(){
 Route::get('/article/{id}',function($id){
     echo"selamat datang di ID=$id ";
 });
+Route::get('/',[PageController::class,'index']);
+Route::get('/about',[PageController::class,'about']);
+Route::get('/article/(id)',[PageController::class,'article']);
