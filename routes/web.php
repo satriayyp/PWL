@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\homeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +26,9 @@ Route::get('/about',function(){
     echo "NIM:204720143<br>";
     echo "Nama: Satria Yudhistira";
 });
-Route::get('/article/{id}',function($id){
-    echo"selamat datang di ID=$id ";
-});
-Route::get('/',[PageController::class,'index']);
+//Route::get('/article/{id}',function($id){
+  //  echo"selamat datang di ID=$id ";
+//});
+Route::get('/',[HomeController::class,'index']);
 Route::get('/about',[PageController::class,'about']);
-Route::get('/article/(id)',[PageController::class,'article']);
+Route::get('/article/{id}',[ArticleController::class,'article']);
